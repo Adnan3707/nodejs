@@ -76,4 +76,20 @@ function sortchar(str){
     }
 return arr.sort();
 }
-console.log(sortchar('tree'));
+// console.log(sortchar('tree'));
+
+//  Find MAx Difference
+
+function MaxDiff(arr){
+ let min = arr[0];
+ let maxDiff = 0;
+  for(let i =0;i<arr.length -1 ; i++){
+    if(arr[i] < min){
+    min = arr[i]    
+    }else{
+        maxDiff = Math.max(maxDiff,arr[i]-min)
+    }
+  }
+    return maxDiff;
+}
+console.log(MaxDiff([7,1,5,3,6,4]))
